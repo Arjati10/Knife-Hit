@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
+#canvas {
+  display: block;
+  margin: 0;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000000;
+  background-color: rgba(164, 144, 124, 0.7);
+}
+body {
+  margin: 0;
+  background: #ada996;
+  background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  );
+  background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+}
+#fire_btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8; /*Button Color*/
+  color: #fff;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+}
+#fire_btn:active {
+  /*on Click*/
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px); /*Move down*/
+  border-bottom: none; /*disappears*/
+}
+#Knifes_rem {
+  font-weight: bold;
+  color: white;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 30px;
+}
+#my_footer {
+  font-weight: bold;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 30px;
+  color: red;
+}
+#Level {
+  font-weight: bold;
+  color: white;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 30px;
+}
+#tagger {
+  font-weight: bold;
+  color: white;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 30px;
+}
+
+.loser-screen-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  scale: 0;
+  transition: scale 300ms;
+}
+.loser-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #454241;
+  padding: 40px 40px;
+  font-size: 20px;
+  border-radius: 30px;
+}
+.loser-name {
+  font-weight: 700;
+  font-size: 50px;
+  padding-bottom: 30px;
+  display: flex;
+}
+.loser-screen-container p {
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.level-screen-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  scale: 0;
+  transition: scale 300ms;
+}
+.level-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #454241;
+  padding: 40px 40px;
+  font-size: 15px;
+  border-radius: 30px;
+}
+.level-name {
+  font-weight: 700;
+  font-size: 50px;
+  padding-bottom: 30px;
+  display: flex;
+}
+.level-screen-container p {
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.levelScreen h1,
+.levelScreen p {
+  display: inline-block;
+}
+
+.levelScreen p {
+  color: white;
+}
+
+.winner-screen-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  scale: 0;
+  transition: scale 300ms;
+}
+.winner-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #454241;
+  padding: 40px 40px;
+  font-size: 15px;
+  border-radius: 30px;
+}
+.winner-name {
+  font-weight: 700;
+  font-size: 50px;
+  padding-bottom: 30px;
+  display: flex;
+}
+.winner-screen-container p {
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.winnerImage {
+  width: 200px;
+}
+
+.bg-img {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+}
+
+.gameover {
+  width: 400px;
+}
+
+.playAgain {
+  margin-top: 30px;
+}
+.playAgain button {
+  display: inline-block;
+  all: unset;
+  text-align: center;
+  background-color: #8d7b68;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 300ms;
+  box-shadow: 0px 0px 31px -7px rgb(0 0 0 / 75%);
+  width: 100px;
+  height: 20px;
+}
+.playAgain button:hover {
+  background-color: #f1dec9;
+}
+
+.levelPage p {
+  display: inline-block;
+}
+
+h1 {
+  margin-top: 40px;
+  color: white;
+}
+
+h1,
+#Knifes_rem {
+  margin-left: 15px;
+  text-align: justify;
+}
+
+.ingfoGame {
+  position: fixed;
+  width: 350px;
+  height: 185px;
+  top: 250px;
+  left: 75px;
+  background-color: rgb(141, 123, 104, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.ingfoLevel {
+  position: fixed;
+  top: 285px;
+  left: 1180px;
+}
+
+.levelImage {
+  width: 200px;
+}

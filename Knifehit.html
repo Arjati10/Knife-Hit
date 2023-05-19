@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,intial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Knife Hit</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+  <body>
+    <audio
+      src="assets/forest-with-small-river-birds-and-nature-field-recording-6735.mp3"
+      class="bgm"
+      id="bgm"
+      autoplay
+      loop
+    ></audio>
+    <audio src="assets/knife-thrust-into-wall-7017.mp3" id="hitSound"></audio>
+
+    <img class="bg-img" src="assets/bg.jpeg" alt="background-img" />
+    <div class="ingfoGame">
+      <h1 textAlign="center">Simple Knife Hit Game</h1>
+      <p id="Knifes_rem"></p>
+    </div>
+
+    <canvas
+      id="canvas"
+      width="100"
+      height="500"
+      onclick="change_status()"
+    ></canvas>
+
+    <div class="ingfoLevel">
+      <img
+        src="assets/lv1-01.png"
+        alt="level 1"
+        id="levelImage"
+        class="levelImage"
+      />
+      <div class="levelPage">
+        <p id="tagger">Current Level :</p>
+        <span></span>
+        <p id="Level">1</p>
+      </div>
+    </div>
+
+    <div class="loser-screen-container" id="loser-screen-container">
+      <div class="loser-screen">
+        <img class="gameover" src="assets/QeMS.gif" alt="gambar game over" />
+        <div class="playAgain" onclick="reloadd()">
+          <button>Play Again</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="level-screen-container" id="level-screen-container">
+      <div class="level-screen">
+        <div class="levelScreen">
+          <h1 id="tagger">Selamat Anda Telah Menyelesaikan Level :</h1>
+          <span></span>
+          <p id="leveling">1</p>
+        </div>
+        <div class="playAgain">
+          <button onclick="reloadd()">Reset</button>
+          <button onclick="nextLevel()">Next Level</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="winner-screen-container" id="winner-screen-container">
+      <div class="winner-screen">
+        <img
+          class="winnerImage"
+          src="assets/knife - Copy.png"
+          alt="gambar game over"
+        />
+        <h1>CONGRATULATIONS YOU WIN!!!</h1>
+        <div class="playAgain">
+          <button onclick="reloadd()">Play Again</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="scripts/script.js"></script>
+</html>
